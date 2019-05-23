@@ -1,0 +1,37 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="materialButtonStyle">@style/AppTheme.RoundedButton</item>
+        <item name="materialCardViewStyle">@style/Widget.MyAppTheme.CardView</item>
+    </style>
+
+    <style name="Widget.MyAppTheme.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardElevation">@dimen/cardElevation</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+    <style name="AppTheme.TextInputEditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint">@color/editTextTint</item>
+    </style>
+    
+    <style name="AppTheme.RoundedButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">30dp</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

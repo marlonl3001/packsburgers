@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Packs Burgers</string>
+    <string name="contentDescription">Image</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="hint_entrar">Entrar</string>
+    <string name="pedidos_finalizados">Pedidos\nFinalizados</string>
+    <string name="pedidos_agendados">Pedidos\nAgendados</string>
+    <string name="finalizados">Finalizados</string>
+    <string name="agendados">Agendados</string>
+</resources>

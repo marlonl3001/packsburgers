@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="pedido" type="br.com.mdr.packsburgers.model.Pedido"/>
+        <variable name="clickListener" type="android.view.View.OnClickListener"/>
+        <import type="android.view.View"/>
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{clickListener}"
+            app:cardBackgroundColor="@color/cardBackgroundColor"
+            android:layout_margin="@dimen/margin8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin16">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgPedido"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/degrade"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                    android:id="@+id/txtNumero"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin8"
+                    android:layout_marginStart="@dimen/margin8"
+                    android:text="@{pedido.desc}"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/imgPedido"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/txtData"/>
+
+            <TextView
+                    android:id="@+id/txtData"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin8"
+                    android:layout_marginStart="@dimen/margin8"
+                    android:text="@{pedido.dataPedido}"
+                    android:textColor="@color/textSecondaryColor"
+                    app:layout_constraintStart_toEndOf="@id/imgPedido"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtNumero"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
