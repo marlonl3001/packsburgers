@@ -4,6 +4,11 @@
     <string name="hint_email">E-mail</string>
     <string name="hint_password">Senha</string>
     <string name="hint_entrar">Entrar</string>
+    <string name="hint_salvar">Salvar</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_cpf">CPF</string>
+    <string name="hint_rg">RG</string>
+    <string name="hint_data_nasc">Data Nascimento</string>
     <string name="pedidos_finalizados">Pedidos\nFinalizados</string>
     <string name="pedidos_agendados">Pedidos\nAgendados</string>
     <string name="finalizados">Finalizados</string>

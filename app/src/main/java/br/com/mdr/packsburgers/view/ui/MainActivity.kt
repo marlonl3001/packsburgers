@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-        NavigationUI.setupActionBarWithNavController(this, findNavController(R.id.nav_fragment))
+
         PacksApp.activity = this
 
         Navigation.findNavController(this, R.id.nav_fragment).navigate(R.id.loginFragment)

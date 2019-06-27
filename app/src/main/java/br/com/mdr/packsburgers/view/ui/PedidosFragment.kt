@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import br.com.mdr.packsburgers.PacksApp
 
 import br.com.mdr.packsburgers.databinding.PedidosFragmentBinding
 import br.com.mdr.packsburgers.model.Pedido
@@ -22,9 +23,10 @@ class PedidosFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel = MainViewModel()
+        viewModel = PacksApp.activity.mainViewModel
         val binding = PedidosFragmentBinding.inflate(inflater, container, false)
         binding.recyclerPedidos.adapter = adapter
+        //binding.recyclerPedidos.addOnScrollListener(viewModel.recyclerScrollListener(viewModel.layoutCabecalho))
         return binding.root
     }
 
